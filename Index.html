@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@1,300&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1226;
+      --card: #161a37;
+      --ink: #e9ecff;
+      --muted: #b8bdf0;
+      --accent: #8a9bff;
+      --accent-2: #ffb86b;
+      --ring: rgba(138,155,255,.45);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      display:grid;
+      place-items:center;
+      background: radial-gradient(1200px 800px at 70% -10%, #1c2148 0%, #0f1226 55%, #0b0d1c 100%);
+      color:var(--ink);
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+
+    .card{
+      width:min(680px, 92vw);
+      background: linear-gradient(180deg, rgba(22,26,55,.85), rgba(22,26,55,.95));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:24px;
+      padding:28px 28px 26px;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 0 12px rgba(255,255,255,.02) inset;
+      backdrop-filter: blur(6px);
+    }
+
+    .row{display:flex; gap:22px; align-items:center}
+
+    .avatar{
+      width:108px; height:108px; border-radius:22px;
+      background:
+        linear-gradient(135deg, var(--accent), var(--accent-2));
+      position:relative; flex:0 0 auto;
+      box-shadow: 0 10px 30px rgba(138,155,255,.45);
+    }
+    .avatar::after{
+      content:""; position:absolute; inset:6px; border-radius:18px;
+      background: url('https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop') center/cover;
+      filter:saturate(1.1) contrast(1.05);
+    }
+
+    .headings{flex:1}
+
+    /* NAME */
+    .name{
+      margin:0 0 4px;
+      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-weight:800;
+      font-size:clamp(26px, 3.6vw, 38px);
+      letter-spacing:.08em;              /* letter-spacing requirement */
+      text-transform:uppercase;           /* text-transform requirement */
+      text-align:left;                    /* text-align requirement */
+      color:#ffffff;
+      /* text-shadow requirement */
+      text-shadow:
+        0 2px 0 rgba(0,0,0,.25),
+        0 8px 18px rgba(138,155,255,.45),
+        0 0 24px rgba(255,184,107,.25);
+    }
+
+    .title{
+      margin:0 0 14px;
+      font-weight:600;
+      font-size:14px;
+      letter-spacing:.22em;               /* different letter-spacing */
+      color:var(--accent);
+      text-decoration: underline;         /* text-decoration requirement */
+      text-underline-offset: 4px;
+    }
+
+    /* BIO */
+    .bio{
+      margin: 8px 0 18px;
+      color:var(--muted);
+      line-height:1.85;                   /* line-height requirement */
+      word-spacing:.18em;                 /* word-spacing requirement */
+      text-align:justify;                 /* text-align different from name */
+    }
+
+    /* QUOTE */
+    .quote{
+      margin:16px 0 6px; padding:16px 18px;
+      background:rgba(255,255,255,.04);
+      border:1px dashed rgba(255,255,255,.12);
+      border-radius:16px;
+      font-family: Merriweather, Georgia, serif;
+      font-style: italic;
+      line-height:1.7;                    /* different line-height */
+      text-align:center;                  /* centered text */
+      text-decoration: underline;         /* decorated text */
+      text-decoration-style: wavy;
+      text-decoration-color: var(--accent-2);
+      position:relative;
+    }
+    .quote::before{
+      content:"\201C";                   /* opening smart quote */
+      position:absolute; left:12px; top:-6px;
+      font-size:48px; line-height:1; opacity:.25;
+      text-shadow: 0 6px 16px rgba(255,184,107,.3);
+    }
+    .quote cite{
+      display:block; margin-top:10px; font-style:normal;
+      font-family: Inter, system-ui, sans-serif;
+      font-size:12px; letter-spacing:.28em;
+      text-transform:uppercase; color:#ffffff; opacity:.75;
+    }
+
+    /* footer chips just to showcase mixed transforms/decorations */
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+    .chip{
+      font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03); color:var(--ink);
+      text-transform:capitalize;          /* another transform */
+      text-decoration:none;               /* reset */
+    }
+    .chip--accent{border-color: var(--ring)}
+
+    /* responsiveness */
+    @media (max-width:520px){
+      .row{flex-direction:column; align-items:flex-start}
+      .avatar{width:92px;height:92px}
+      .name{text-align:center; width:100%}
+      .title{text-align:center}
+      .bio{text-align:left}
+    }
+  </style>
+</head>
+<body>
+  <article class="card" role="region" aria-label="Profile Card">
+    <div class="row">
+      <div class="avatar" aria-hidden="true"></div>
+      <header class="headings">
+        <h1 class="name">MUhammad Arsalan</h1>
+        <h2 class="title">WEB DEV • AI</h2>
+      </header>
+    </div>
+
+    <p class="bio">
+     I development is the process of creating and maintaining websites and web applications that run on the internet. It combines creativity, logic, and technology to design digital experiences that are functional, user-friendly, and visually appealing.</p>
+    <blockquote class="quote">
+      “Good design is as little design as possible.”
+      <cite>— Dieter Rams</cite>
+    </blockquote>
+
+    <div class="chips" aria-label="Tags">
+      <span class="chip chip--accent">accessibility-first</span>
+      <span class="chip">color systems</span>
+      <span class="chip">type & layout</span>
+      <span class="chip">design ops</span>
+    </div>
+  </article>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
