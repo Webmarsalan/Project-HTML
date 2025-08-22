@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Table</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #e9f26c, #4dd9e5);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .table-container {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      width: 80%;
+      max-width: 900px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+    }
+
+    thead {
+      background: #9c27b0;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 15px;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #efd5d5;
+    }
+
+    tbody tr:hover {
+      background: #e1bee7;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NO</th>
+          <th>name</th>
+          <th>Class</th>
+          <th>Date of birth</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Jean</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Nov 1962</td>
+          <td>5000$</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jack</td>
+          <td>Dupont</td>
+          <td>1368</td>
+          <td>18 Dec 1962</td>
+          <td>2000$</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Jean</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Nov 1972</td>
+          <td>4200$</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Nadia</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Mar 1982</td>
+          <td>6300$</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Nadia</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Mar 1982</td>
+          <td>6300$</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Nadia</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Mar 1982</td>
+          <td>6300$</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Nadia</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Mar 1982</td>
+          <td>6300$</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Nadia</td>
+          <td>leBon</td>
+          <td>1368</td>
+          <td>18 Mar 1982</td>
+          <td>6300$</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
